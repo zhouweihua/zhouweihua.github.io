@@ -2,9 +2,9 @@
 个人博客： https://zhouweihua.github.io/blog/
 
 ---------
-
-项目一：移动H5 https://zhouweihua.github.io/creditloan/
+项目制作展示 内容为压缩混淆代码
+项目一：后台web https://zhouweihua.github.io/pc/
 用到的基本技术： vue vuex vue-route axios sass eslint element-ui
 
-项目二：后台web https://zhouweihua.github.io/crm/
+项目二：移动H5 https://zhouweihua.github.io/mobile/
 用到的基本技术： vue vuex vue-route axios less
