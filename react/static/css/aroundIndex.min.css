@@ -1,1 +1,1 @@
-.index-cont{padding-top:45px;font-size:.28rem;text-align:center}
+.index-cont{position:relative;padding-top:45px;font-size:.28rem;text-align:center}.index-cont .goTest{position:absolute;top:100px;left:50%;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%);transform:translateX(-50%);width:70px;height:30px;line-height:30px;text-align:center;border:1px solid #ccc;border-radius:5px}
