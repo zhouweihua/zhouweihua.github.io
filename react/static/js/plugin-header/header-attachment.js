@@ -1,0 +1,1 @@
+"use strict";define(["zepto","react"],function(e,t){return t.createClass({handleGoback:function(){AppRouter.goBackContainer()},render:function(){return t.createElement("header",{className:""},t.createElement("span",{className:"icon-back",onClick:this.handleGoback}),t.createElement("p",{className:"ipt"},this.props.titleName))}})});

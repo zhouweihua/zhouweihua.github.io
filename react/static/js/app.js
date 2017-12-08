@@ -1,0 +1,1 @@
+define(["react","route"],function(i,e){return{initialize:function(){window.AppRouter=new e,AppRouter.initialize()}}});
