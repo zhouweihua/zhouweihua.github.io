@@ -5,9 +5,12 @@
 项目制作展示 内容为压缩混淆代码
 项目一：后台web https://zhouweihua.github.io/pc/
 用到的基本技术： vue vuex vue-route axios sass eslint element-ui
+mock数据 然后动态加载路由 以及相关element组件的添加 可以直接扩展作为公司业务系统
 
 项目二：移动H5 https://zhouweihua.github.io/mobile/
-用到的基本技术： vue vuex vue-route axios less
+用到的基本技术： vue vuex vue-route axios sass flexible
+自己实现了一个下拉刷新组件 一个滚轮选择组件 页面前进后退动画 一些弹性动画等等
 
 项目三：移动H5 https://zhouweihua.github.io/react/
 用到的基本技术： react 自己写了一个小型的route路由 通过正则匹配 找到对应的模板 用require做动态加载
+用react实现过相关插件：轮播 日期 头部等插件
