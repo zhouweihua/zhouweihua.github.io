@@ -312,6 +312,137 @@
           
             <p>对象赋值 和 数组赋值</p>
 <p><img src="/blog/2117/11/26/0011-earn-money-by-js-10/objectAndarray.png" alt="对象赋值和数组赋差别"></p>
+<p>对象是直接引用 数组是直接赋值</p>
+<hr>
+<p>不得用于商业用途 转载需注明出处</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2117/11/26/0012-earn-money-by-js-11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhouweihue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="z-world">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2117/11/26/0012-earn-money-by-js-11/" itemprop="url">[earn money by js] 靠着JavaScript赚钱系列11</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:49+08:00">
+                2117-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>iscroll 拖拽动画的原理</p>
+<p>很多人一看到动画就会害怕 特别是一些复杂的动画<br>其实我也挺怕的<br>只从深入研究一下 很多动画就显得不是那么可怕了</p>
+<p>动画效果 关键的数是3个 transition transform translate</p>
+<p>transition设置: 动画的对象; 动画的过程参数; 在一定的时间区间内平滑的过渡；<br>—-transition:property duration timing-function delay;<br>——–property:CSS的属性，例如：width height 为none时停止所有的运动，可以为transform<br>——–duration:持续时间<br>——–timing-function:ease等<br>——–delay:延迟<br>——–注意：当property为all的时候所有动画</p>
+<p>transform设置: 最终完成的效果<br>—-CSS3中主要包括 旋转：rotate() 顺时针旋转给定的角度，允许负值 rotate(30deg)<br>——–扭曲：skew() 元素翻转给定的角度,根据给定的水平线（X 轴）和垂直线（Y 轴）参数：skew(30deg,20deg)<br>——–缩放：scale() 放大或缩小，根据给定的宽度（X 轴）和高度（Y 轴）参数： scale(2,4)<br>——–移动：translate() 平移，传进 x,y值，代表沿x轴和y轴平移的距离<br>——–所有的2D转换方法组合在一起： matrix()  旋转、缩放、移动以及倾斜元素</p>
+<p>translate:移动，<font color="red">transform的一个方法</font><br>—-注意：它是transform的一个方法 这个就足够了<br>—-用法：el.style.webkitTransform = ‘translate3d(0,0,0)’;</p>
+<p>一般代码编写流程就是<br>在css中设置transition</p>
+<p>然后在js中调整transform</p>
+<p>我们一般变化就是x y坐标的位置 这个时候用到的就是translate</p>
 <hr>
 <p>不得用于商业用途 转载需注明出处</p>
 
@@ -393,7 +524,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:50+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:48+08:00">
                 2117-11-26
               </time>
             
@@ -488,7 +619,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2117/11/26/0012-earn-money-by-js-11/">
+    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2117/11/26/0014-earn-money-by-js-13/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhouweihue">
@@ -507,7 +638,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2117/11/26/0012-earn-money-by-js-11/" itemprop="url">[earn money by js] 靠着JavaScript赚钱系列11</a></h1>
+                <a class="post-title-link" href="/blog/2117/11/26/0014-earn-money-by-js-13/" itemprop="url">[earn money by js] 靠着JavaScript赚钱系列13</a></h1>
         
 
         <div class="post-meta">
@@ -519,7 +650,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:50+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:47+08:00">
                 2117-11-26
               </time>
             
@@ -559,15 +690,11 @@
       
         
           
-            <p>iscroll 拖拽动画的原理</p>
-<p>很多人一看到动画就会害怕 特别是一些复杂的动画<br>其实我也挺怕的<br>只从深入研究一下 很多动画就显得不是那么可怕了</p>
-<p>动画效果 关键的数是3个 transition transform translate</p>
-<p>transition设置: 动画的对象; 动画的过程参数; 在一定的时间区间内平滑的过渡；<br>—-transition:property duration timing-function delay;<br>——–property:CSS的属性，例如：width height 为none时停止所有的运动，可以为transform<br>——–duration:持续时间<br>——–timing-function:ease等<br>——–delay:延迟<br>——–注意：当property为all的时候所有动画</p>
-<p>transform设置: 最终完成的效果<br>—-CSS3中主要包括 旋转：rotate() 顺时针旋转给定的角度，允许负值 rotate(30deg)<br>——–扭曲：skew() 元素翻转给定的角度,根据给定的水平线（X 轴）和垂直线（Y 轴）参数：skew(30deg,20deg)<br>——–缩放：scale() 放大或缩小，根据给定的宽度（X 轴）和高度（Y 轴）参数： scale(2,4)<br>——–移动：translate() 平移，传进 x,y值，代表沿x轴和y轴平移的距离<br>——–所有的2D转换方法组合在一起： matrix()  旋转、缩放、移动以及倾斜元素</p>
-<p>translate:移动，<font color="red">transform的一个方法</font><br>—-注意：它是transform的一个方法 这个就足够了<br>—-用法：el.style.webkitTransform = ‘translate3d(0,0,0)’;</p>
-<p>一般代码编写流程就是<br>在css中设置transition</p>
-<p>然后在js中调整transform</p>
-<p>我们一般变化就是x y坐标的位置 这个时候用到的就是translate</p>
+            <p>熟练知道xhr请求的abort方法</p>
+<p>一般情况下 接口请求都是一次次请求 成功进入成功方法 失败进入失败方法</p>
+<p>但是如果遇到计算价格的时候 在用户在界面操作一次 就要调用接口重新计算一次价格<br>那么接口返回的时候 顺序就会很有影响</p>
+<p>大部分情况下接口返回顺序都是按照我们发送出去的顺序进行返回的<br>但是小部分时间就有可能错乱 价格一定是按照我们最后一次接口返回进行显示 这就会导致一定的错误了</p>
+<p>所以在某些接口在重新调用的时候 我们将上一次同样的接口调用进行abort掉</p>
 <hr>
 <p>不得用于商业用途 转载需注明出处</p>
 
@@ -1370,133 +1497,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2017/11/26/my-mind-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zhouweihue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="z-world">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/11/26/my-mind-3/" itemprop="url">去过的地方</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T23:59:57+08:00">
-                2017-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>第一次出发之后 到现在 走过了不少地方</p>
-<p>或许从小就一直到处和父母跑 喜欢见识各种东西 没钱的日子只能看着 现如今可以慢慢的去走 去做</p>
-<p>上海也算逛的差不多了 </p>
-<p>第一次意义上的出去是：南京 </p>
-<p>然后是西安 杭州 苏州 太湖 西藏 泰山 黄山 张家界 桐庐 宜兴 常州</p>
-<p>如果还想去的话 还有厦门 内蒙古 东北 四川</p>
-<hr>
-<p>不得用于商业用途 转载需注明出处</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1547,7 +1547,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
