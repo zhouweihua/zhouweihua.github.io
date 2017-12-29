@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="stopImmediatePropagation &amp;amp; stopPropagation &amp;amp; preventDefault &amp;amp; return false &amp;amp; cancelBubble preventDefault阻止了默认事件 stopPropagation阻止了冒泡事件 stopImmediatePropagation阻止了冒泡 同时平级事件也被阻止了 默认事件没有被">
+<meta name="description" content="触发事件   如何主动触发某一个事件 123456&amp;lt;script&amp;gt;	var swDom = document.getElementById(&amp;quot;sw-done&amp;quot;);	var event = document.createEvent(&amp;apos;Events&amp;apos;);	event.initEvent(&amp;apos;touchstart&amp;apos;, true, tr">
 <meta name="keywords" content="earn-money,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[earn money by js] 靠着JavaScript赚钱系列9">
-<meta property="og:url" content="http://zhouweihua.github.io/blog/2117/11/26/0010-earn-money-by-js/index.html">
+<meta property="og:title" content="[earn money by js] 靠着JavaScript赚钱系列4">
+<meta property="og:url" content="http://zhouweihua.github.io/blog/2117/11/26/1004-earn-money-by-js/index.html">
 <meta property="og:site_name" content="z-world">
-<meta property="og:description" content="stopImmediatePropagation &amp;amp; stopPropagation &amp;amp; preventDefault &amp;amp; return false &amp;amp; cancelBubble preventDefault阻止了默认事件 stopPropagation阻止了冒泡事件 stopImmediatePropagation阻止了冒泡 同时平级事件也被阻止了 默认事件没有被">
-<meta property="og:updated_time" content="2017-12-18T06:10:08.396Z">
+<meta property="og:description" content="触发事件   如何主动触发某一个事件 123456&amp;lt;script&amp;gt;	var swDom = document.getElementById(&amp;quot;sw-done&amp;quot;);	var event = document.createEvent(&amp;apos;Events&amp;apos;);	event.initEvent(&amp;apos;touchstart&amp;apos;, true, tr">
+<meta property="og:updated_time" content="2017-12-11T00:52:00.971Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[earn money by js] 靠着JavaScript赚钱系列9">
-<meta name="twitter:description" content="stopImmediatePropagation &amp;amp; stopPropagation &amp;amp; preventDefault &amp;amp; return false &amp;amp; cancelBubble preventDefault阻止了默认事件 stopPropagation阻止了冒泡事件 stopImmediatePropagation阻止了冒泡 同时平级事件也被阻止了 默认事件没有被">
+<meta name="twitter:title" content="[earn money by js] 靠着JavaScript赚钱系列4">
+<meta name="twitter:description" content="触发事件   如何主动触发某一个事件 123456&amp;lt;script&amp;gt;	var swDom = document.getElementById(&amp;quot;sw-done&amp;quot;);	var event = document.createEvent(&amp;apos;Events&amp;apos;);	event.initEvent(&amp;apos;touchstart&amp;apos;, true, tr">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://zhouweihua.github.io/blog/2117/11/26/0010-earn-money-by-js/"/>
+  <link rel="canonical" href="http://zhouweihua.github.io/blog/2117/11/26/1004-earn-money-by-js/"/>
 
 
 
 
 
-  <title>[earn money by js] 靠着JavaScript赚钱系列9 | z-world</title>
+  <title>[earn money by js] 靠着JavaScript赚钱系列4 | z-world</title>
   
 
 
@@ -186,7 +186,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -206,7 +206,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2117/11/26/0010-earn-money-by-js/">
+    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2117/11/26/1004-earn-money-by-js/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhouweihue">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[earn money by js] 靠着JavaScript赚钱系列9</h1>
+          <h1 class="post-title" itemprop="name headline">[earn money by js] 靠着JavaScript赚钱系列4</h1>
         
 
         <div class="post-meta">
@@ -270,9 +270,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:51+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:56+08:00">
                 2117-11-26
               </time>
             
@@ -310,16 +310,15 @@
       
 
       
-        <p>stopImmediatePropagation &amp; stopPropagation &amp; preventDefault &amp; return false &amp; cancelBubble</p>
-<p><font size="4" color="#000">preventDefault</font><br>阻止了默认事件</p>
-<p><font size="4" color="#000">stopPropagation</font><br>阻止了冒泡事件</p>
-<p><font size="4" color="#000">stopImmediatePropagation</font><br>阻止了冒泡 同时平级事件也被阻止了 默认事件没有被阻止</p>
-<p><font size="4" color="#000">return false</font><br>没有传说中的全部阻止的效果 这一点或许要大家自己测了才知道</p>
-<p><font size="4" color="#ccc">cancelBubble</font><br>事实上stoppropagation和cancelBubble的作用是一样的，都是用来阻止浏览器默认的事件冒泡行为。<br>一般很少人用</p>
-<p>个人写的demo地址<br><a href="https://zhouweihua.github.io/example/event.html">https://zhouweihua.github.io/example/event.html</a></p>
-<p>参考资料<br><a href="http://www.cnblogs.com/dannyxie/p/5642727.html" target="_blank" rel="noopener">http://www.cnblogs.com/dannyxie/p/5642727.html</a></p>
+        <font size="4" color="#000">触发事件</font> 
+
+<p>如何主动触发某一个事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	var swDom = document.getElementById(&quot;sw-done&quot;);</span><br><span class="line">	var event = document.createEvent(&apos;Events&apos;);</span><br><span class="line">	event.initEvent(&apos;touchstart&apos;, true, true);</span><br><span class="line">	swDom.dispatchEvent(event);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>这是通过主动设定事件 然后主动js代码触发事件 非人工触发的一个实例</p>
 <hr>
-<p>事件冒泡和事件捕获<br>如果你想要做的是和冒泡正好相反的操作 请记住 还有<font color="red">事件捕获</font>操作</p>
+<p>多说一句</p>
+<p>事件 异步 其实可以简单的理解成事件的回调</p>
+<p>也就是利用一个缓冲区存取事件id 执行的时候找到他 并执行</p>
 <hr>
 <p>不得用于商业用途 转载需注明出处</p>
 
@@ -354,8 +353,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2117/11/26/0011-earn-money-by-js/" rel="next" title="[earn money by js] 靠着JavaScript赚钱系列10">
-                <i class="fa fa-chevron-left"></i> [earn money by js] 靠着JavaScript赚钱系列10
+              <a href="/blog/2117/11/26/1005-earn-money-by-js/" rel="next" title="[earn money by js] 靠着JavaScript赚钱系列5">
+                <i class="fa fa-chevron-left"></i> [earn money by js] 靠着JavaScript赚钱系列5
               </a>
             
           </div>
@@ -364,8 +363,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2117/11/26/0009-earn-money-by-js/" rel="prev" title="[earn money by js] 靠着JavaScript赚钱系列8">
-                [earn money by js] 靠着JavaScript赚钱系列8 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2117/11/26/1003-earn-money-by-js/" rel="prev" title="[earn money by js] 靠着JavaScript赚钱系列3">
+                [earn money by js] 靠着JavaScript赚钱系列3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -434,8 +433,8 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">25</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -448,7 +447,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 </a>
               </div>
             

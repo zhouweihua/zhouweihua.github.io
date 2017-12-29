@@ -79,19 +79,20 @@
 
 
 
-<meta name="description" content="对象赋值 和 数组赋值  对象是直接引用 数组是直接赋值  不得用于商业用途 转载需注明出处">
+<meta name="description" content="300秒延迟 在移动端 我们为了增加用户体验 放弃click事件 转而直接利用touchstart事件目的就是为了减少用户响应事件 一般情况下 不会有任何问题但是当界面上的元素因为我们的touch事件改变了 就会产生一些不必要的问题页面跳转 遮罩层消失等等那么touch之后才开始作用的click事件就会导致一些问题 个人写的一个demo 模拟了整个过程   点击button相同位置的遮罩层 在控制">
 <meta name="keywords" content="earn-money,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[earn money by js] 靠着JavaScript赚钱系列10">
-<meta property="og:url" content="http://zhouweihua.github.io/blog/2117/11/26/0011-earn-money-by-js/index.html">
+<meta property="og:title" content="[earn money by js] 靠着JavaScript赚钱系列8">
+<meta property="og:url" content="http://zhouweihua.github.io/blog/2117/11/26/1008-earn-money-by-js/index.html">
 <meta property="og:site_name" content="z-world">
-<meta property="og:description" content="对象赋值 和 数组赋值  对象是直接引用 数组是直接赋值  不得用于商业用途 转载需注明出处">
-<meta property="og:image" content="http://zhouweihua.github.io/blog/2117/11/26/0011-earn-money-by-js/objectAndarray.png">
-<meta property="og:updated_time" content="2017-12-19T06:47:38.584Z">
+<meta property="og:description" content="300秒延迟 在移动端 我们为了增加用户体验 放弃click事件 转而直接利用touchstart事件目的就是为了减少用户响应事件 一般情况下 不会有任何问题但是当界面上的元素因为我们的touch事件改变了 就会产生一些不必要的问题页面跳转 遮罩层消失等等那么touch之后才开始作用的click事件就会导致一些问题 个人写的一个demo 模拟了整个过程   点击button相同位置的遮罩层 在控制">
+<meta property="og:image" content="http://zhouweihua.github.io/blog/2117/11/26/1008-earn-money-by-js/300delay1.jpg">
+<meta property="og:image" content="http://zhouweihua.github.io/blog/2117/11/26/1008-earn-money-by-js/300delay2.jpg">
+<meta property="og:updated_time" content="2017-12-29T02:54:21.581Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[earn money by js] 靠着JavaScript赚钱系列10">
-<meta name="twitter:description" content="对象赋值 和 数组赋值  对象是直接引用 数组是直接赋值  不得用于商业用途 转载需注明出处">
-<meta name="twitter:image" content="http://zhouweihua.github.io/blog/2117/11/26/0011-earn-money-by-js/objectAndarray.png">
+<meta name="twitter:title" content="[earn money by js] 靠着JavaScript赚钱系列8">
+<meta name="twitter:description" content="300秒延迟 在移动端 我们为了增加用户体验 放弃click事件 转而直接利用touchstart事件目的就是为了减少用户响应事件 一般情况下 不会有任何问题但是当界面上的元素因为我们的touch事件改变了 就会产生一些不必要的问题页面跳转 遮罩层消失等等那么touch之后才开始作用的click事件就会导致一些问题 个人写的一个demo 模拟了整个过程   点击button相同位置的遮罩层 在控制">
+<meta name="twitter:image" content="http://zhouweihua.github.io/blog/2117/11/26/1008-earn-money-by-js/300delay1.jpg">
 
 
 
@@ -121,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://zhouweihua.github.io/blog/2117/11/26/0011-earn-money-by-js/"/>
+  <link rel="canonical" href="http://zhouweihua.github.io/blog/2117/11/26/1008-earn-money-by-js/"/>
 
 
 
 
 
-  <title>[earn money by js] 靠着JavaScript赚钱系列10 | z-world</title>
+  <title>[earn money by js] 靠着JavaScript赚钱系列8 | z-world</title>
   
 
 
@@ -188,7 +189,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -208,7 +209,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -245,7 +246,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2117/11/26/0011-earn-money-by-js/">
+    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2117/11/26/1008-earn-money-by-js/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhouweihue">
@@ -262,7 +263,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[earn money by js] 靠着JavaScript赚钱系列10</h1>
+          <h1 class="post-title" itemprop="name headline">[earn money by js] 靠着JavaScript赚钱系列8</h1>
         
 
         <div class="post-meta">
@@ -272,9 +273,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:50+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:52+08:00">
                 2117-11-26
               </time>
             
@@ -312,9 +313,20 @@
       
 
       
-        <p>对象赋值 和 数组赋值</p>
-<p><img src="/blog/2117/11/26/0011-earn-money-by-js/objectAndarray.png" alt="对象赋值和数组赋差别"></p>
-<p>对象是直接引用 数组是直接赋值</p>
+        <p>300秒延迟</p>
+<p>在移动端 我们为了增加用户体验 放弃click事件 转而直接利用touchstart事件<br>目的就是为了减少用户响应事件</p>
+<p>一般情况下 不会有任何问题<br>但是当界面上的元素因为我们的touch事件改变了 就会产生一些不必要的问题<br>页面跳转 遮罩层消失等等<br>那么touch之后才开始作用的click事件就会导致一些问题</p>
+<p>个人写的一个demo 模拟了整个过程</p>
+<div style="width:300px"><br><img src="/blog/2117/11/26/1008-earn-money-by-js/300delay1.jpg" alt="300delay"><br></div>
+
+<p>点击button相同位置的遮罩层 在控制台显示出了同时触发了button的click事件</p>
+<div style="width:300px"><br><img src="/blog/2117/11/26/1008-earn-money-by-js/300delay2.jpg" alt="300delay"><br></div>
+
+<p>其中关键的js代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt; </span><br><span class="line">	layer.addEventListener(&quot;touchstart&quot;, function(e) &#123;</span><br><span class="line">	  console.log(&quot;layer touchstart--&gt;&quot; + (new Date().getTime()));</span><br><span class="line">	  body.removeChild(layer);</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">	testButton.addEventListener(&quot;click&quot;, function(e) &#123;</span><br><span class="line">	  console.log(&quot;test-button click--&gt;&quot; + (new Date().getTime()));</span><br><span class="line">	&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><br>当点击遮罩层 让遮罩层消失 就有可能同时出发button事件</p>
+<p>如果想要避免 在代码里添加 e.preventDefault();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt; </span><br><span class="line">	layer.addEventListener(&quot;touchstart&quot;, function(e) &#123;</span><br><span class="line">	  console.log(&quot;layer touchstart--&gt;&quot; + (new Date().getTime()));</span><br><span class="line">	  body.removeChild(layer);</span><br><span class="line">	  e.preventDefault();</span><br><span class="line">	&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>以上就是个人理解的300秒延迟</p>
+<p>demo地址<br><a href="https://zhouweihua.github.io/example/300delay.html">https://zhouweihua.github.io/example/300delay.html</a></p>
 <hr>
 <p>不得用于商业用途 转载需注明出处</p>
 
@@ -349,8 +361,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2117/11/26/0012-earn-money-by-js/" rel="next" title="[earn money by js] 靠着JavaScript赚钱系列11">
-                <i class="fa fa-chevron-left"></i> [earn money by js] 靠着JavaScript赚钱系列11
+              <a href="/blog/2117/11/26/1009-earn-money-by-js/" rel="next" title="[earn money by js] 靠着JavaScript赚钱系列9">
+                <i class="fa fa-chevron-left"></i> [earn money by js] 靠着JavaScript赚钱系列9
               </a>
             
           </div>
@@ -359,8 +371,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2117/11/26/0010-earn-money-by-js/" rel="prev" title="[earn money by js] 靠着JavaScript赚钱系列9">
-                [earn money by js] 靠着JavaScript赚钱系列9 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2117/11/26/1007-earn-money-by-js/" rel="prev" title="[earn money by js] 靠着JavaScript赚钱系列7">
+                [earn money by js] 靠着JavaScript赚钱系列7 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -429,8 +441,8 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">25</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -443,7 +455,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 </a>
               </div>
             
