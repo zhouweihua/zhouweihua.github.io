@@ -3,11 +3,11 @@
 
 ---------
 项目一：后台web https://zhouweihua.github.io/pc/
-用到的基本技术： vue vuex vue-route axios sass eslint element-ui
+用到的基本技术： vue vuex vue-route axios scss eslint element-ui
 mock数据 然后动态加载路由 以及相关element组件的添加 可以扩展作为公司业务系统
 
 项目二：移动H5 https://zhouweihua.github.io/mobile/
-用到的基本技术： vue vuex vue-route axios sass flexible
+用到的基本技术： vue vuex vue-route axios scss flexible
 自己实现了
 1.下拉刷新组件
 2.滚轮选择组件 添加动画特效
