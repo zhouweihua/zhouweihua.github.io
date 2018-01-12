@@ -82,15 +82,15 @@
 <meta name="description" content="vue源码分析1 从17年6月开始 接触vue源码 时间过得太快 即便是到现在也只能说自己对vue有了一个大概的了解 看源码是一个痛苦的过程 毕竟别人写的 有时候自己身在其中 有时候根本无法知道所传达的含义 不过学到的也很多 现在讲自己所知道的分享出来 这个系列所用的demo是vue自带的TODO 以及vue版本为2.3.3   先看一下 vue代码总体的流程    -流程 1 Vue$3">
 <meta name="keywords" content="earn-money,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[earn money by js] 靠着JavaScript赚钱系列20">
+<meta property="og:title" content="[earn money by js] 靠着JavaScript赚钱系列20-vue源码分析1:完整的流程">
 <meta property="og:url" content="http://zhouweihua.github.io/blog/2117/11/26/1020-earn-money-by-js/index.html">
 <meta property="og:site_name" content="z-world">
 <meta property="og:description" content="vue源码分析1 从17年6月开始 接触vue源码 时间过得太快 即便是到现在也只能说自己对vue有了一个大概的了解 看源码是一个痛苦的过程 毕竟别人写的 有时候自己身在其中 有时候根本无法知道所传达的含义 不过学到的也很多 现在讲自己所知道的分享出来 这个系列所用的demo是vue自带的TODO 以及vue版本为2.3.3   先看一下 vue代码总体的流程    -流程 1 Vue$3">
 <meta property="og:image" content="http://zhouweihua.github.io/blog/2117/11/26/1020-earn-money-by-js/demo.png">
 <meta property="og:image" content="http://zhouweihua.github.io/blog/2117/11/26/1020-earn-money-by-js/liuchengall.png">
-<meta property="og:updated_time" content="2018-01-12T04:42:55.449Z">
+<meta property="og:updated_time" content="2018-01-12T05:55:17.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[earn money by js] 靠着JavaScript赚钱系列20">
+<meta name="twitter:title" content="[earn money by js] 靠着JavaScript赚钱系列20-vue源码分析1:完整的流程">
 <meta name="twitter:description" content="vue源码分析1 从17年6月开始 接触vue源码 时间过得太快 即便是到现在也只能说自己对vue有了一个大概的了解 看源码是一个痛苦的过程 毕竟别人写的 有时候自己身在其中 有时候根本无法知道所传达的含义 不过学到的也很多 现在讲自己所知道的分享出来 这个系列所用的demo是vue自带的TODO 以及vue版本为2.3.3   先看一下 vue代码总体的流程    -流程 1 Vue$3">
 <meta name="twitter:image" content="http://zhouweihua.github.io/blog/2117/11/26/1020-earn-money-by-js/demo.png">
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>[earn money by js] 靠着JavaScript赚钱系列20 | z-world</title>
+  <title>[earn money by js] 靠着JavaScript赚钱系列20-vue源码分析1:完整的流程 | z-world</title>
   
 
 
@@ -263,7 +263,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[earn money by js] 靠着JavaScript赚钱系列20</h1>
+          <h1 class="post-title" itemprop="name headline">[earn money by js] 靠着JavaScript赚钱系列20-vue源码分析1:完整的流程</h1>
         
 
         <div class="post-meta">
@@ -322,8 +322,11 @@
 <div style="width:300px"><br><img src="/blog/2117/11/26/1020-earn-money-by-js/demo.png" alt="个人微信"><br></div>
 
 <p>先看一下 vue代码总体的流程<br>    -流程 1 Vue$3<br>    -流程 2 $mount 由app.js中的app.$mount引发的<br>    -流程 3 template解析<br>    -流程 4 render函数生成<br>    -流程 5 数据执行 挂载<br>    -流程 6 mountComponent<br>    -流程 7 监视所有对象<br>    -流程 8 watch的更新函数<br>    -流程 9 render：with函数到VNODE<br>    -流程 10 返回vnode<br>    -流程 11  update：VNODE到实际节点<br>    -流程 12 <strong>patch</strong><br>    -流程 14 createElm</p>
-<p>完整的流程代码分析图</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="/blog/2117/11/26/1020-earn-money-by-js/liuchengall.png" alt="liuchengall"></h2><p>不得用于商业用途 转载需注明出处</p>
+<p>完整的流程代码分析图<br><img src="/blog/2117/11/26/1020-earn-money-by-js/liuchengall.png" alt="liuchengall"></p>
+<hr>
+<p>网页看不清可以下载下来看</p>
+<hr>
+<p>不得用于商业用途 转载需注明出处</p>
 
       
     </div>
@@ -356,8 +359,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2117/11/26/1021-earn-money-by-js/" rel="next" title="[earn money by js] 靠着JavaScript赚钱系列21">
-                <i class="fa fa-chevron-left"></i> [earn money by js] 靠着JavaScript赚钱系列21
+              <a href="/blog/2117/11/26/1021-earn-money-by-js/" rel="next" title="[earn money by js] 靠着JavaScript赚钱系列21-vue源码分析2:initState">
+                <i class="fa fa-chevron-left"></i> [earn money by js] 靠着JavaScript赚钱系列21-vue源码分析2:initState
               </a>
             
           </div>
@@ -366,8 +369,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2117/11/26/1019-earn-money-by-js/" rel="prev" title="[earn money by js] 靠着JavaScript赚钱系列19">
-                [earn money by js] 靠着JavaScript赚钱系列19 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2117/11/26/1019-earn-money-by-js/" rel="prev" title="[earn money by js] 靠着JavaScript赚钱系列19-yeild">
+                [earn money by js] 靠着JavaScript赚钱系列19-yeild <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -420,17 +423,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -483,22 +477,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"><a href="#" class="headerlink" title=""></a><img src="/blog/2117/11/26/1020-earn-money-by-js/liuchengall.png" alt="liuchengall"></span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
