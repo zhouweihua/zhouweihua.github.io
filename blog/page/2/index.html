@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -268,7 +268,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:50+08:00">
                 2117-11-26
@@ -392,7 +392,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:49+08:00">
                 2117-11-26
@@ -522,7 +522,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:48+08:00">
                 2117-11-26
@@ -648,7 +648,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:47+08:00">
                 2117-11-26
@@ -774,7 +774,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:46+08:00">
                 2117-11-26
@@ -896,7 +896,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:45+08:00">
                 2117-11-26
@@ -1022,7 +1022,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:44+08:00">
                 2117-11-26
@@ -1146,7 +1146,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:43+08:00">
                 2117-11-26
@@ -1193,7 +1193,8 @@
 <p>关于nginx配置只需要知道两点</p>
 <p>第一点：知道如果访问资源<br>1.1 如果nginx和资源文件夹放在同一个目录下<br>那么访问方法如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location /vue &#123;</span><br><span class="line">    alias ../vue;</span><br><span class="line">    index  index.html index.htm;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>1.2 如果nginx单独在一个地方 统一配置全局所有的网站<br>那么访问方法如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location /vue &#123;</span><br><span class="line">    root &quot;D:\website&quot;;</span><br><span class="line">    index  index.html index.htm;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>第二点：知道如何代理接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>第二点：知道如何代理接口<br>当要访问接口全称是<br><a href="http://xxx.xxx.com/example?v=xxx" target="_blank" rel="noopener">http://xxx.xxx.com/example?v=xxx</a><br>我们在代码里写的是我们本地地址<br><a href="http://192.168.0.1/example?v=xxx" target="_blank" rel="noopener">http://192.168.0.1/example?v=xxx</a><br>下面的配置现实<br><a href="http://192.168.0.1/example?v=xxx" target="_blank" rel="noopener">http://192.168.0.1/example?v=xxx</a> ==&gt; <a href="http://xxx.xxx.com/example?v=xxx" target="_blank" rel="noopener">http://xxx.xxx.com/example?v=xxx</a> 的代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location /example &#123; #添加访问目录的代理配置</span><br><span class="line">       rewrite  ^/(.*)$ /$1 break;</span><br><span class="line">       proxy_pass   http://xxx.xxx.com;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p>不得用于商业用途 转载需注明出处</p>
 
@@ -1273,7 +1274,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:42+08:00">
                 2117-11-26
@@ -1396,7 +1397,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:41+08:00">
                 2117-11-26
@@ -1439,7 +1440,13 @@
         
           
             <p>yeild</p>
-<p>…待续</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">function *foo(x) &#123;</span><br><span class="line">    var y = 2 * (yield (x + 1));</span><br><span class="line">    var z = yield (y / 3);</span><br><span class="line">    return (x + y + z);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var it = foo( 5 );</span><br><span class="line"></span><br><span class="line">// note: not sending anything into `next()` here</span><br><span class="line">console.log( it.next() );       // &#123; value:6, done:false &#125;</span><br><span class="line">console.log( it.next( 12 ) );   // &#123; value:8, done:false &#125;</span><br><span class="line">console.log( it.next( 13 ) );   // &#123; value:42, done:true &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>var it = foo( 5 );<br>我们在初始化的时候：传入参数x到我们的foo函数中，就像普通函数那样做一样，使得：x=5</p>
+<p>console.log( it.next() );<br>第一个it.next()被调用的时候，我们什么都没有传，这是因为没有yeild函数去接受我们的传入的参数 即便是你传入一个从参数到第一个next，该参数会被忽略<br>在foo函数中，yield (x + 1) 执行 暂停 传出值：6 done:false<br>–个人理解：这里的yeild应该是已经上一个暂停的yeild，程序一开始运行，没有所谓的暂停的说法 那么参数的说话就无所谓了</p>
+<p>console.log( it.next( 12 ) );<br>当第二个it.next( 12 )被执行的时候，会把参数12放到我们上一次暂停的地方<br>var y = 2 <em> (yield (x + 1)); ==&gt; var y = 2 </em> (12); ==&gt; y = 24<br>程序继续运行到yield (y / 3) 程序暂停 传出值：8 done:false</p>
+<p>console.log( it.next( 13 ) );<br>当第三个it.next( 13 )被执行的时候，会把参数12放到我们上一次暂停的地方<br>var z = yield (y / 3); ==&gt; var z = 13;<br>程序继续运行到return (x + y + z) = 42 传出值：42 done:true</p>
+<p>上面所述是按照参考资料中一段进行翻译 如果将这一段看懂 我想yield也就没有任何问题了<br>参考资料<br><a href="https://davidwalsh.name/es6-generators" target="_blank" rel="noopener">https://davidwalsh.name/es6-generators</a></p>
+<p> 以上是当年学习koa的时候 见过最好的翻译了 特地分享出来</p>
 <hr>
 <p>不得用于商业用途 转载需注明出处</p>
 
@@ -1528,7 +1535,7 @@
                 <a href="/blog/archives/">
               
                   <span class="site-state-item-count">35</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -1541,7 +1548,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 </a>
               </div>
             
