@@ -1,0 +1,53 @@
+
+<html> 
+	<head>  
+	    <title>事件阻止相关测试</title>  
+	</head>
+
+	<body class="testBody"> 
+		<a class="test" href="http://www.baidu.com">跳转百度</a>  
+	</body>
+
+	<script type="application/javascript">
+
+		//这边a标签上有默认事件 跳转url
+		var test = document.getElementsByClassName("test")[0];
+		var testBody = document.getElementsByClassName("testBody")[0];
+		testBody.addEventListener("click", function(e) {
+		  alert("testBody");
+		});
+
+		// 事件test0
+		test.addEventListener("click", function(e) {
+
+		  /*test 标准流程 先执行:click事件test0 || 然后:test1平级事件 || 然后冒泡testBody || 最后执行href跳转*/
+		  // alert("test0");
+		  
+		  /*test 测试preventDefault 先执行:click事件test0 || 然后:test1平级事件 || 然后冒泡testBody*/
+		  /*没有href跳转 阻止了默认事件*/
+		  // alert("test0");
+		  // e.preventDefault();
+		  
+		  /*test 测试stopPropagation  先执行:click事件test0 || 然后:test1平级事件 || href跳转 */
+		  /*没有冒泡 阻止了冒泡事件*/
+		  // alert("test0");
+		  // e.stopPropagation();
+		  
+		  /*test 测试stopImmediatePropagation 先执行:click事件test0 || href跳转 */
+		  /*没有冒泡 同时平级事件也被阻止了 默认事件没有被阻止*/
+		  // alert("test0");
+		  // e.stopImmediatePropagation();
+		  
+		  /*test 测试false true 先执行:click事件test0 || 然后:test1平级事件 || 然后冒泡testBody || 最后执行href跳转*/
+		  /*没有传说中的全部阻止的效果 false在jQuery中才有的效果*/
+		  alert("test0");
+		  return false;
+		});
+
+		// test1平级事件
+		test.addEventListener("click", function(e) {
+		  alert("test1");
+		});
+	</script> 
+
+</html>

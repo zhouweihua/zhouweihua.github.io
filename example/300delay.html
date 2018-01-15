@@ -1,0 +1,52 @@
+<html>  
+<head>  
+    <title>300delay</title>  
+</head>
+<style type="text/css">
+	p {
+		font-size: 34px;
+	}
+	.test-button {
+		width: 300px;
+		height: 100px;
+		text-align: center;
+		font-size: 34px;
+		line-height: 100px;
+		border-radius: 6px;
+		background: #ff6600;
+	}
+	.layer {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		opacity: 0.5;
+		background: #000000;
+		z-index: 100;
+	}
+</style>
+<body>
+	<p>ps:在模拟器下运行</p>
+	<div class="test-button">
+		点击一下
+	</div>
+	<div class="layer"></div>
+</body>
+<script type="text/javascript">
+
+	var layer = document.getElementsByClassName("layer")[0];
+	var body = window.document.body;
+	var testButton = document.getElementsByClassName("test-button")[0];
+
+	layer.addEventListener("touchstart", function(e) {
+	  console.log("layer touchstart-->" + (new Date().getTime()));
+	  body.removeChild(layer);
+	  // e.preventDefault();
+	});
+
+	testButton.addEventListener("click", function(e) {
+	  console.log("test-button click-->" + (new Date().getTime()));
+	});
+
+</script>
+</html>
