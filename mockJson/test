@@ -11,8 +11,8 @@
   "body" : {
     "data" : {
       "productNo" : "3",
-      "creditRate" : "0.0003",
-      "maxValue" : "2200",
+      "creditRate" : "0.002",
+      "maxValue" : "100",
       "flag" : 101
     },
     "retValue" : 1,
