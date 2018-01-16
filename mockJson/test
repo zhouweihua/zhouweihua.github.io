@@ -1,3 +1,21 @@
 {
-	"a":a
+  "head" : {
+    "sequence" : "817789827085655368738266908780526972907386686262",
+    "version" : "1.0",
+    "publickey" : "559285641029793771066868921145374118966679845656"
+  },
+  "common" : {
+    "point" : 0,
+    "announce" : ""
+  },
+  "body" : {
+    "data" : {
+      "productNo" : "3",
+      "creditRate" : "0.0003",
+      "maxValue" : "2200",
+      "flag" : 101
+    },
+    "retValue" : 1,
+    "resultMsg" : "OK"
+  }
 }
