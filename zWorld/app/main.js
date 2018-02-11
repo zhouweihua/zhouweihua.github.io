@@ -13,9 +13,12 @@ var renderer = new THREE.WebGLRenderer();
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
+// 0 ------
 var axes = new THREE.AxisHelper(20);
 scene.add(axes);
+// 0 ------
 
+// 1 ------
 // create the ground plane
 var planeGeometry = new THREE.PlaneGeometry(60, 20);
 var planeMaterial = new THREE.MeshBasicMaterial({
@@ -32,7 +35,9 @@ plane.position.z = 0
 
 // add the plane to the scene
 scene.add(plane);
+// 1 ------
 
+// 2 ------
 // create a cube
 var cubeGeometry = new THREE.CubeGeometry(4, 4, 4);
 var cubeMaterial = new THREE.MeshBasicMaterial({
@@ -49,7 +54,9 @@ cube.position.z = 0;
 
 // add the cube to the scene
 scene.add(cube);
+// 2 ------
 
+// 3 ------
 var sphereGeometry = new THREE.SphereGeometry(4, 20, 20);
 var sphereMaterial = new THREE.MeshBasicMaterial({
 	color: 0x7777ff,
@@ -65,6 +72,7 @@ sphere.position.z = 2;
 
 // add the sphere to the scene
 scene.add(sphere);
+// 3 ------
 
 // position and point the camera to the center of the scene
 camera.position.x = -30;
