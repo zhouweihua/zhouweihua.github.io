@@ -1,0 +1,30 @@
+
+<html> 
+	<head>  
+	    <title>事件 冒泡 捕获 相关测试</title>  
+	</head>
+
+	<body class="testBody"> 
+		<div class="testDiv"> 
+			<a class="test">先冒泡后捕获 false：冒泡 true：捕获</a>
+		</div>
+	</body>
+
+	<script type="application/javascript">
+		//这边a标签上有默认事件 跳转url
+		var testBody = document.getElementsByClassName("testBody")[0]; 
+		var testDiv = document.getElementsByClassName("testDiv")[0]; 
+		var test = document.getElementsByClassName("test")[0]; 
+
+		testBody.addEventListener("click", function(e) {
+			console.log("testBody")
+		},true);
+		testDiv.addEventListener("click", function(e) {
+			console.log("testDiv")
+		},true);
+		test.addEventListener("click", function(e) {
+			console.log("test")
+		},true);
+	</script> 
+
+</html>
