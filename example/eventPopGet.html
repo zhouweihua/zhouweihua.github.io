@@ -6,16 +6,17 @@
 
 	<body class="testBody"> 
 		<div class="testDiv"> 
-			<a class="test">先冒泡后捕获 false：冒泡 true：捕获</a>
+			<a class="test">点击</a>
 		</div>
 	</body>
 
 	<script type="application/javascript">
-		//这边a标签上有默认事件 跳转url
+		// 这边a标签上有默认事件 跳转url 
 		var testBody = document.getElementsByClassName("testBody")[0]; 
 		var testDiv = document.getElementsByClassName("testDiv")[0]; 
 		var test = document.getElementsByClassName("test")[0]; 
 
+		// false：冒泡 true：捕获
 		testBody.addEventListener("click", function(e) {
 			console.log("testBody")
 		},true);
