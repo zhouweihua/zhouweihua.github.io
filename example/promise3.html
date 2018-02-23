@@ -1,0 +1,61 @@
+
+<html> 
+	<head>  
+	    <title>徒手写promise1方法</title>  
+	</head>
+
+	<body class="testBody"> 
+		<div class="testDiv"> 
+		</div>
+	</body>
+
+	<script type="application/javascript">
+		var testDiv = document.getElementsByClassName("testDiv")[0];
+
+		// 初步构建
+		var f1 = function(resolve){
+			setTimeout(function(){ resolve("f1") }, 3000)
+		}
+
+		function Promise(fn) {
+		    var promise = this,
+		        value = null;
+		        promise._resolves = [];
+		        promise._status = 'PENDING';
+
+		    this.then = function (onFulfilled) {
+		        return new Promise(function(resolve) {
+		            function handle(value) {
+		                var ret = typeof onFulfilled === 'function' && onFulfilled(value) || value;
+		                resolve(ret);
+		            }
+		            if (promise._status === 'PENDING') {
+		                promise._resolves.push(handle);
+		            } else if(promise._status === FULFILLED){
+		                handle(value);
+		            }
+		        })
+		        
+		    };
+
+
+		    function resolve(value) {
+		        setTimeout(function(){
+		            promise._status = "FULFILLED";
+		            promise._resolves.forEach(function (callback) {
+		                value = callback( value);
+		            })
+		        },0);
+		    }
+
+		    fn(resolve);
+		}
+
+		new Promise(f1).then(function(val){
+		    console.log(val+"-1");
+		}).then(function(val){
+		    console.log(val+"-2");
+		})
+	</script> 
+
+</html>

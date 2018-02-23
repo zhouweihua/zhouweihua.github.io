@@ -1,0 +1,49 @@
+
+<html> 
+	<head>  
+	    <title>徒手写promise1方法</title>  
+	</head>
+
+	<body class="testBody"> 
+		<div class="testDiv"> 
+		</div>
+	</body>
+
+	<script type="application/javascript">
+		var testDiv = document.getElementsByClassName("testDiv")[0];
+
+		// 初步构建
+		var f1 = function(resolve){
+			setTimeout(function(){ resolve("f1") }, 3000)
+		}
+
+		// 链式数组
+		function Promise(fn) {
+		    var promise = this,
+		        value = null;
+		        promise._resolves = [];
+
+		    this.then = function (onFulfilled) {
+		        promise._resolves.push(onFulfilled);
+		        return this;
+		    };
+
+		    function resolve(value) {
+		        setTimeout(function() {
+		            promise._resolves.forEach(function (callback) {
+		                callback(value);
+		            });
+		        },0);
+		    }
+
+		    fn(resolve);
+		}
+
+		new Promise(f1).then(function(val){
+		    console.log(val+"-1");
+		}).then(function(val){
+		    console.log(val+"-2");
+		})
+	</script> 
+
+</html>
