@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://zhouweihua.github.io/blog/2117/11/26/1024-earn-money-by-js/index.html">
 <meta property="og:site_name" content="z-world">
 <meta property="og:description" content="vuex源码分析 vuex的基本代码 大部分功能属于辅助性质  在通过简化操作之后 你就会发现 vuex真正核心的代码只有那么几句 话不多少 请看代码 123456789101112131415161718192021222324252627282930import Vue from &amp;apos;vue&amp;apos;; function Store(options) &amp;#123;  var stat">
-<meta property="og:updated_time" content="2018-03-10T02:30:50.196Z">
+<meta property="og:updated_time" content="2018-03-10T02:43:46.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[earn money by js] 靠着JavaScript赚钱系列24-简化版vuex">
 <meta name="twitter:description" content="vuex源码分析 vuex的基本代码 大部分功能属于辅助性质  在通过简化操作之后 你就会发现 vuex真正核心的代码只有那么几句 话不多少 请看代码 123456789101112131415161718192021222324252627282930import Vue from &amp;apos;vue&amp;apos;; function Store(options) &amp;#123;  var stat">
@@ -186,7 +186,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -206,7 +206,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -270,7 +270,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:36+08:00">
                 2117-11-26
@@ -316,6 +316,8 @@
 <p>话不多少 请看代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;;</span><br><span class="line"> </span><br><span class="line">function Store(options) &#123;</span><br><span class="line"></span><br><span class="line">  var state = &#123;</span><br><span class="line">    a: &apos;a&apos;,</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  this.setA = function (para) &#123;</span><br><span class="line">    this.state.a. = para</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  this._vm = new Vue(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">      $$state: state</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var prototypeAccessors = &#123;</span><br><span class="line">  state: &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">prototypeAccessors.state.get = function () &#123;</span><br><span class="line">  return this._vm._data.$$state</span><br><span class="line">&#125;;</span><br><span class="line">Object.defineProperties(Store.prototype, prototypeAccessors);</span><br><span class="line"></span><br><span class="line">export default new Store()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>这个精简版的代码没有所谓的action mutation commit 比较简单粗暴 ~_~</p>
+<p>使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// main中 先引入</span><br><span class="line">import store from &apos;./store&apos;;</span><br><span class="line"></span><br><span class="line">// 设定全局方法</span><br><span class="line">Vue.prototype.store = store;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// .vue文件里 mapGetters 替换成最原始的使用</span><br><span class="line">computed: &#123;</span><br><span class="line">  // ...mapGetters([&quot;a&quot;]),</span><br><span class="line">  a: function() &#123;</span><br><span class="line">    return this.store.state.a;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p>网页看不清可以下载下来看</p>
 <hr>
@@ -433,7 +435,7 @@
                 <a href="/blog/archives/">
               
                   <span class="site-state-item-count">36</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -446,7 +448,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 </a>
               </div>
             
