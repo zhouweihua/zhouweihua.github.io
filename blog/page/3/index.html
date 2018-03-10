@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -268,7 +268,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:40+08:00">
                 2117-11-26
@@ -401,7 +401,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:39+08:00">
                 2117-11-26
@@ -526,7 +526,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:38+08:00">
                 2117-11-26
@@ -653,7 +653,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:37+08:00">
                 2117-11-26
@@ -749,6 +749,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2117/11/26/1024-earn-money-by-js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhouweihue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="z-world">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2117/11/26/1024-earn-money-by-js/" itemprop="url">[earn money by js] 靠着JavaScript赚钱系列24-简化版vuex</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2117-11-26T23:59:36+08:00">
+                2117-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>vuex源码分析</p>
+<p>vuex的基本代码 大部分功能属于辅助性质 </p>
+<p>在通过简化操作之后 你就会发现 vuex真正核心的代码只有那么几句</p>
+<p>话不多少 请看代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;;</span><br><span class="line"> </span><br><span class="line">function Store(options) &#123;</span><br><span class="line"></span><br><span class="line">  var state = &#123;</span><br><span class="line">    a: &apos;a&apos;,</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  this.setA = function (para) &#123;</span><br><span class="line">    this.state.a. = para</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  this._vm = new Vue(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">      $$state: state</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var prototypeAccessors = &#123;</span><br><span class="line">  state: &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">prototypeAccessors.state.get = function () &#123;</span><br><span class="line">  return this._vm._data.$$state</span><br><span class="line">&#125;;</span><br><span class="line">Object.defineProperties(Store.prototype, prototypeAccessors);</span><br><span class="line"></span><br><span class="line">export default new Store()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这个精简版的代码没有所谓的action mutation commit 比较简单粗暴 ~_~</p>
+<hr>
+<p>网页看不清可以下载下来看</p>
+<hr>
+<p>不得用于商业用途 转载需注明出处</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2116/11/26/7001-earn-money-by-css/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -778,7 +907,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2116-11-26T23:59:59+08:00">
                 2116-11-26
@@ -903,7 +1032,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2116-11-26T23:59:58+08:00">
                 2116-11-26
@@ -1031,7 +1160,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2116-11-26T23:59:57+08:00">
                 2116-11-26
@@ -1158,7 +1287,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2116-11-26T23:59:56+08:00">
                 2116-11-26
@@ -1284,7 +1413,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2116-11-26T23:59:55+08:00">
                 2116-11-26
@@ -1331,132 +1460,6 @@
 <p><font size="4" color="#000">方法1： positon</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.test &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  left: 50%;</span><br><span class="line">  top: 50%;</span><br><span class="line">  transform: translateX(-50%) translateY(-50%);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt; </span><br></pre></td></tr></table></figure></p>
 <p><font size="4" color="#000">方法2：flex</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.test &#123;</span><br><span class="line">	display: flex;</span><br><span class="line">	justify-content: center;</span><br><span class="line">	align-items: center;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt; </span><br></pre></td></tr></table></figure></p>
 <p><font size="4" color="#000">方法3： 只针对文字垂直居中</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.test &#123;</span><br><span class="line">	text-align: center;</span><br><span class="line">	line-height: $parent-height;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt; </span><br></pre></td></tr></table></figure></p>
-<hr>
-<p>不得用于商业用途 转载需注明出处</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouweihua.github.io/blog/blog/2017/11/26/my-mind-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zhouweihue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="z-world">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/11/26/my-mind-1/" itemprop="url">个人随笔</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T23:59:59+08:00">
-                2017-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>原来有一个想法 去做老师</p>
-<p>这些年 关于前端技术 积累的不少<br>周六周末整理一下 可以慢慢的把这些分享出来</p>
-<p>自己并不是喜欢好为人师 所以这里的分享都是一些个人看法 希望可以帮到你 在前端的路上走的顺畅一点 当然如果有不对的地方 也请多多指教</p>
-<p>剩下的就是自己的一些个人总结 记录一下个人平时的一些想法<br>看得多了 不想让自己的脑子永远是别人的跑马场 要有自己的一些想法</p>
-<p>时间积累的力量 它可以改变一起<br>10年之后 当你想要去追的时候 你会发现 你已经追不上的 所以任何事情 如果你想做 最好的时间是现在</p>
 <hr>
 <p>不得用于商业用途 转载需注明出处</p>
 
@@ -1544,8 +1547,8 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">35</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -1558,7 +1561,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 </a>
               </div>
             
